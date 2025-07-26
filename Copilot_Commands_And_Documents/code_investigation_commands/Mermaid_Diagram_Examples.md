@@ -4,29 +4,29 @@
 Mermaid supports a wide variety of diagram/chart types for visualizing code, workflows, and data. For full details, see the [Mermaid documentation](https://mermaid.js.org/intro/).
 
 **Common Mermaid Diagram Types:**
-- **Flowchart** – Visualize processes, logic, and workflows.
-- **Sequence Diagram** – Show interactions between components or objects over time.
-- **Class Diagram** – Represent classes, methods, and relationships (UML style).
-- **State Diagram** – Model state machines and transitions.
-- **Entity Relationship Diagram** – Describe database tables and their relationships.
-- **User Journey** – Map user journeys and experiences.
-- **Gantt** – Visualize project timelines and schedules.
-- **Pie Chart** – Display data proportions.
-- **Quadrant Chart** – Show data in four quadrants.
-- **Requirement Diagram** – Visualize requirements and dependencies.
-- **GitGraph (Git) Diagram** – Illustrate Git branching and commits.
-- **C4 Diagram** – Model software architecture at different abstraction levels.
-- **Mindmaps** – Organize ideas and concepts hierarchically.
-- **Timeline** – Show events in chronological order.
-- **ZenUML** – Alternative sequence diagram syntax.
-- **Sankey** – Visualize flow and distribution of resources.
-- **XY Chart** – Plot data points on X/Y axes.
-- **Block Diagram** – Represent system components and their connections.
-- **Packet Diagram** – Visualize network packet flows.
-- **Kanban** – Model Kanban boards for workflow management.
-- **Architecture Diagram** – Show system or infrastructure architecture.
-- **Radar Chart** – Compare multivariate data.
-- **Treemap** – Visualize hierarchical data as nested rectangles.
+- **[Flowchart](https://mermaid.js.org/syntax/flowchart.html)** – Visualize processes, logic, and workflows. [learn more](https://mermaid.js.org/syntax/flowchart.html)
+- **[Sequence Diagram](https://mermaid.js.org/syntax/sequenceDiagram.html)** – Show interactions between components or objects over time. [learn more](https://mermaid.js.org/syntax/sequenceDiagram.html)
+- **[Class Diagram](https://mermaid.js.org/syntax/classDiagram.html)** – Represent classes, methods, and relationships (UML style). [learn more](https://mermaid.js.org/syntax/classDiagram.html)
+- **[State Diagram](https://mermaid.js.org/syntax/stateDiagram.html)** – Model state machines and transitions. [learn more](https://mermaid.js.org/syntax/stateDiagram.html)
+- **[Entity Relationship Diagram](https://mermaid.js.org/syntax/entityRelationshipDiagram.html)** – Describe database tables and their relationships. [learn more](https://mermaid.js.org/syntax/entityRelationshipDiagram.html)
+- **[User Journey](https://mermaid.js.org/syntax/userJourney.html)** – Map user journeys and experiences. [learn more](https://mermaid.js.org/syntax/userJourney.html)
+- **[Gantt](https://mermaid.js.org/syntax/gantt.html)** – Visualize project timelines and schedules. [learn more](https://mermaid.js.org/syntax/gantt.html)
+- **[Pie Chart](https://mermaid.js.org/syntax/pie.html)** – Display data proportions. [learn more](https://mermaid.js.org/syntax/pie.html)
+- **[Quadrant Chart](https://mermaid.js.org/syntax/quadrantChart.html)** – Show data in four quadrants. [learn more](https://mermaid.js.org/syntax/quadrantChart.html)
+- **[Requirement Diagram](https://mermaid.js.org/syntax/requirementDiagram.html)** – Visualize requirements and dependencies. [learn more](https://mermaid.js.org/syntax/requirementDiagram.html)
+- **[GitGraph (Git) Diagram](https://mermaid.js.org/syntax/gitgraph.html)** – Illustrate Git branching and commits. [learn more](https://mermaid.js.org/syntax/gitgraph.html)
+- **[C4 Diagram](https://mermaid.js.org/syntax/c4c.html)** – Model software architecture at different abstraction levels. [learn more](https://mermaid.js.org/syntax/c4c.html)
+- **[Mindmaps](https://mermaid.js.org/syntax/mindmap.html)** – Organize ideas and concepts hierarchically. [learn more](https://mermaid.js.org/syntax/mindmap.html)
+- **[Timeline](https://mermaid.js.org/syntax/timeline.html)** – Show events in chronological order. [learn more](https://mermaid.js.org/syntax/timeline.html)
+- **[ZenUML](https://mermaid.js.org/syntax/zenuml.html)** – Alternative sequence diagram syntax. [learn more](https://mermaid.js.org/syntax/zenuml.html)
+- **[Sankey](https://mermaid.js.org/syntax/sankey.html)** – Visualize flow and distribution of resources. [learn more](https://mermaid.js.org/syntax/sankey.html)
+- **[XY Chart](https://mermaid.js.org/syntax/xychart.html)** – Plot data points on X/Y axes. [learn more](https://mermaid.js.org/syntax/xychart.html)
+- **[Block Diagram](https://mermaid.js.org/syntax/block.html)** – Represent system components and their connections. [learn more](https://mermaid.js.org/syntax/block.html)
+- **[Packet Diagram](https://mermaid.js.org/syntax/packet.html)** – Visualize network packet flows. [learn more](https://mermaid.js.org/syntax/packet.html)
+- **[Kanban](https://mermaid.js.org/syntax/kanban.html)** – Model Kanban boards for workflow management. [learn more](https://mermaid.js.org/syntax/kanban.html)
+- **[Architecture Diagram](https://mermaid.js.org/syntax/architecture.html)** – Show system or infrastructure architecture. [learn more](https://mermaid.js.org/syntax/architecture.html)
+- **[Radar Chart](https://mermaid.js.org/syntax/radar.html)** – Compare multivariate data. [learn more](https://mermaid.js.org/syntax/radar.html)
+- **[Treemap](https://mermaid.js.org/syntax/treemap.html)** – Visualize hierarchical data as nested rectangles. [learn more](https://mermaid.js.org/syntax/treemap.html)
 
 ## Rendering the Code as Diagrams
 
