@@ -764,16 +764,24 @@ zenuml
 ````plaintext
 ```mermaid
 sankey-beta
-    A[Source] 0.5 B[Target]
-    A 0.2 C[Other]
+
+%% source,target,value
+Electricity grid,Over generation / exports,104.453
+Electricity grid,Heating and cooling - homes,113.726
+Electricity grid,H2 conversion,27.14
+
 ```
 ````
 
 **Rendered Graph:**
 ```mermaid
 sankey-beta
-    A[Source] 0.5 B[Target]
-    A 0.2 C[Other]
+
+%% source,target,value
+Electricity grid,Over generation / exports,104.453
+Electricity grid,Heating and cooling - homes,113.726
+Electricity grid,H2 conversion,27.14
+
 ```
 
 ---
@@ -784,20 +792,24 @@ sankey-beta
 ````plaintext
 ```mermaid
 xychart-beta
-    title XY Chart Example
-    x-axis "X" 0 --> 10
-    y-axis "Y" 0 --> 100
-    "Series1" : [ [1,10], [2,20], [3,30] ]
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+
 ```
 ````
 
 **Rendered Graph:**
 ```mermaid
 xychart-beta
-    title XY Chart Example
-    x-axis "X" 0 --> 10
-    y-axis "Y" 0 --> 100
-    "Series1" : [ [1,10], [2,20], [3,30] ]
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+
 ```
 
 ---
@@ -807,15 +819,33 @@ xychart-beta
 **Mermaid Code:**
 ````plaintext
 ```mermaid
-block
-    A[Block A] --> B[Block B]
+block-beta
+  columns 3
+  Frontend blockArrowId6<[" "]>(right) Backend
+  space:2 down<[" "]>(down)
+  Disk left<[" "]>(left) Database[("Database")]
+
+  classDef front fill:#696,stroke:#333;
+  classDef back fill:#969,stroke:#333;
+  class Frontend front
+  class Backend,Database back
+
 ```
 ````
 
 **Rendered Graph:**
 ```mermaid
-block
-    A[Block A] --> B[Block B]
+block-beta
+  columns 3
+  Frontend blockArrowId6<[" "]>(right) Backend
+  space:2 down<[" "]>(down)
+  Disk left<[" "]>(left) Database[("Database")]
+
+  classDef front fill:#696,stroke:#333;
+  classDef back fill:#969,stroke:#333;
+  class Frontend front
+  class Backend,Database back
+
 ```
 
 ---
@@ -825,19 +855,55 @@ block
 **Mermaid Code:**
 ````plaintext
 ```mermaid
-packetdiag
-    {
-      A -> B -> C;
-    }
+packet
+---
+title: "TCP Packet"
+---
+packet
+0-15: "Source Port"
+16-31: "Destination Port"
+32-63: "Sequence Number"
+64-95: "Acknowledgment Number"
+96-99: "Data Offset"
+100-105: "Reserved"
+106: "URG"
+107: "ACK"
+108: "PSH"
+109: "RST"
+110: "SYN"
+111: "FIN"
+112-127: "Window"
+128-143: "Checksum"
+144-159: "Urgent Pointer"
+160-191: "(Options and Padding)"
+192-255: "Data (variable length)"
+
 ```
 ````
 
 **Rendered Graph:**
 ```mermaid
-packetdiag
-    {
-      A -> B -> C;
-    }
+---
+title: "TCP Packet"
+---
+packet
+0-15: "Source Port"
+16-31: "Destination Port"
+32-63: "Sequence Number"
+64-95: "Acknowledgment Number"
+96-99: "Data Offset"
+100-105: "Reserved"
+106: "URG"
+107: "ACK"
+108: "PSH"
+109: "RST"
+110: "SYN"
+111: "FIN"
+112-127: "Window"
+128-143: "Checksum"
+144-159: "Urgent Pointer"
+160-191: "(Options and Padding)"
+192-255: "Data (variable length)"
 ```
 
 ---
@@ -877,23 +943,34 @@ kanban
 **Mermaid Code:**
 ````plaintext
 ```mermaid
-architecture
-    component Web
-    component API
-    component DB
-    Web --> API
-    API --> DB
+architecture-beta
+    group api(cloud)[API]
+
+    service db(database)[Database] in api
+    service disk1(disk)[Storage] in api
+    service disk2(disk)[Storage] in api
+    service server(server)[Server] in api
+
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
+
 ```
 ````
 
 **Rendered Graph:**
 ```mermaid
-architecture
-    component Web
-    component API
-    component DB
-    Web --> API
-    API --> DB
+architecture-beta
+    group api(cloud)[API]
+
+    service db(database)[Database] in api
+    service disk1(disk)[Storage] in api
+    service disk2(disk)[Storage] in api
+    service server(server)[Server] in api
+
+    db:L -- R:server
+    disk1:T -- B:server
+    disk2:T -- B:db
 ```
 
 ---
@@ -935,22 +1012,30 @@ radar
 **Mermaid Code:**
 ````plaintext
 ```mermaid
-treemap
-    A
-      B
-        C
-      D
+treemap-beta
+"Products"
+    "Electronics"
+        "Phones": 50
+        "Computers": 30
+        "Accessories": 20
+    "Clothing"
+        "Men's": 40
+        "Women's": 40
+
 ```
 ````
 
 **Rendered Graph:**
 ```mermaid
-treemap
-    A
-      B
-        C
-      D
+treemap-beta
+"Products"
+    "Electronics"
+        "Phones": 50
+        "Computers": 30
+        "Accessories": 20
+    "Clothing"
+        "Men's": 40
+        "Women's": 40
 ```
-
 ---
 
