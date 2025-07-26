@@ -141,19 +141,7 @@ Click the copy button to quickly copy any command.
 /generateMermaidDiagram library <library_name> state
 ```
 ```plaintext
-/generateMermaidDiagram library <library_name> erd
-```
-```plaintext
-/generateMermaidDiagram library <library_name> userjourney
-```
-```plaintext
 /generateMermaidDiagram library <library_name> gantt
-```
-```plaintext
-/generateMermaidDiagram library <library_name> pie
-```
-```plaintext
-/generateMermaidDiagram library <library_name> quadrant
 ```
 ```plaintext
 /generateMermaidDiagram library <library_name> requirement
@@ -175,9 +163,6 @@ Click the copy button to quickly copy any command.
 ```
 ```plaintext
 /generateMermaidDiagram library <library_name> sankey
-```
-```plaintext
-/generateMermaidDiagram library <library_name> xy
 ```
 ```plaintext
 /generateMermaidDiagram library <library_name> block
@@ -356,4 +341,616 @@ Click the copy button to quickly copy any command.
 
 **Tip:**  
 Replace `<function_name>` with the name of your function to generate diagrams for that specific function.
+
+## Sample Graphs
+
+Below are samples for each major Mermaid diagram type. Each sample includes a title, the Mermaid code, and the rendered graph.
+
+---
+
+### Flowchart
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+flowchart TD
+    Start --> Process
+    Process --> Decision
+    Decision -- Yes --> End
+    Decision -- No --> Process
+```
+````
+
+**Rendered Graph:**
+```mermaid
+flowchart TD
+    Start --> Process
+    Process --> Decision
+    Decision -- Yes --> End
+    Decision -- No --> Process
+```
+
+---
+
+### Sequence Diagram
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>Bob: Hello Bob, how are you?
+    Bob-->>Alice: I am good thanks!
+```
+````
+
+**Rendered Graph:**
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>Bob: Hello Bob, how are you?
+    Bob-->>Alice: I am good thanks!
+```
+
+---
+
+### Class Diagram
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+classDiagram
+    class Animal {
+        +String name
+        +eat()
+        +sleep()
+    }
+    class Dog {
+        +bark()
+    }
+    Animal <|-- Dog
+```
+````
+
+**Rendered Graph:**
+```mermaid
+classDiagram
+    class Animal {
+        +String name
+        +eat()
+        +sleep()
+    }
+    class Dog {
+        +bark()
+    }
+    Animal <|-- Dog
+```
+
+---
+
+### State Diagram
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> Processing : start
+    Processing --> Idle : finish
+```
+````
+
+**Rendered Graph:**
+```mermaid
+stateDiagram-v2
+    [*] --> Idle
+    Idle --> Processing : start
+    Processing --> Idle : finish
+```
+
+---
+
+### Entity Relationship Diagram
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE_ITEM : contains
+    CUSTOMER {
+        string name
+        string address
+    }
+    ORDER {
+        int id
+        date orderDate
+    }
+    LINE_ITEM {
+        int quantity
+        float price
+    }
+```
+````
+
+**Rendered Graph:**
+```mermaid
+erDiagram
+    CUSTOMER ||--o{ ORDER : places
+    ORDER ||--|{ LINE_ITEM : contains
+    CUSTOMER {
+        string name
+        string address
+    }
+    ORDER {
+        int id
+        date orderDate
+    }
+    LINE_ITEM {
+        int quantity
+        float price
+    }
+```
+
+---
+
+### User Journey
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+journey
+    title User Journey for Checkout
+    section Browse
+      Visit site: 5: User
+      Search product: 4: User
+    section Purchase
+      Add to cart: 4: User
+      Checkout: 3: User
+```
+````
+
+**Rendered Graph:**
+```mermaid
+journey
+    title User Journey for Checkout
+    section Browse
+      Visit site: 5: User
+      Search product: 4: User
+    section Purchase
+      Add to cart: 4: User
+      Checkout: 3: User
+```
+
+---
+
+### Gantt
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+gantt
+    title Project Timeline
+    dateFormat  YYYY-MM-DD
+    section Section
+    Task 1     :a1, 2024-06-01, 3d
+    Task 2     :after a1  , 4d
+```
+````
+
+**Rendered Graph:**
+```mermaid
+gantt
+    title Project Timeline
+    dateFormat  YYYY-MM-DD
+    section Section
+    Task 1     :a1, 2024-06-01, 3d
+    Task 2     :after a1  , 4d
+```
+
+---
+
+### Pie Chart
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+pie
+    title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+```
+````
+
+**Rendered Graph:**
+```mermaid
+pie
+    title Pets adopted by volunteers
+    "Dogs" : 386
+    "Cats" : 85
+    "Rats" : 15
+```
+
+---
+
+### Quadrant Chart
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+quadrantChart
+    title Reach and Engagement
+    x-axis Low Reach --> High Reach
+    y-axis Low Engagement --> High Engagement
+    "A" : [0.2, 0.8]
+    "B" : [0.6, 0.4]
+```
+````
+
+**Rendered Graph:**
+```mermaid
+quadrantChart
+    title Reach and Engagement
+    x-axis Low Reach --> High Reach
+    y-axis Low Engagement --> High Engagement
+    "A" : [0.2, 0.8]
+    "B" : [0.6, 0.4]
+```
+
+---
+
+### Requirement Diagram
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+requirementDiagram
+    requirement req1 {
+      id: 1
+      text: The system shall authenticate users
+    }
+    requirement req2 {
+      id: 2
+      text: The system shall log access
+    }
+    req1 - req2
+```
+````
+
+**Rendered Graph:**
+```mermaid
+requirementDiagram
+    requirement req1 {
+      id: 1
+      text: The system shall authenticate users
+    }
+    requirement req2 {
+      id: 2
+      text: The system shall log access
+    }
+    req1 - req2
+```
+
+---
+
+### GitGraph (Git) Diagram
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+gitGraph
+    commit
+    branch develop
+    checkout develop
+    commit
+    checkout main
+    merge develop
+```
+````
+
+**Rendered Graph:**
+```mermaid
+gitGraph
+    commit
+    branch develop
+    checkout develop
+    commit
+    checkout main
+    merge develop
+```
+
+---
+
+### C4 Diagram
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+C4Context
+    title System Context diagram for Internet Banking System
+    Person(customer, "Bank Customer")
+    System(banking_system, "Internet Banking System")
+    customer -> banking_system : Uses
+```
+````
+
+**Rendered Graph:**
+```mermaid
+C4Context
+    title System Context diagram for Internet Banking System
+    Person(customer, "Bank Customer")
+    System(banking_system, "Internet Banking System")
+    customer -> banking_system : Uses
+```
+
+---
+
+### Mindmap
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+mindmap
+  root
+    A
+      B
+      C
+    D
+```
+````
+
+**Rendered Graph:**
+```mermaid
+mindmap
+  root
+    A
+      B
+      C
+    D
+```
+
+---
+
+### Timeline
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+timeline
+    title History of Computers
+    1970 : Invention of DRAM
+    1981 : IBM PC
+    1991 : World Wide Web
+```
+````
+
+**Rendered Graph:**
+```mermaid
+timeline
+    title History of Computers
+    1970 : Invention of DRAM
+    1981 : IBM PC
+    1991 : World Wide Web
+```
+
+---
+
+### ZenUML
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+zenuml
+    Alice->Bob: Hello
+    Bob-->Alice: Hi!
+```
+````
+
+**Rendered Graph:**
+```mermaid
+zenuml
+    Alice->Bob: Hello
+    Bob-->Alice: Hi!
+```
+
+---
+
+### Sankey
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+sankey-beta
+    A[Source] 0.5 B[Target]
+    A 0.2 C[Other]
+```
+````
+
+**Rendered Graph:**
+```mermaid
+sankey-beta
+    A[Source] 0.5 B[Target]
+    A 0.2 C[Other]
+```
+
+---
+
+### XY Chart
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+xychart-beta
+    title XY Chart Example
+    x-axis "X" 0 --> 10
+    y-axis "Y" 0 --> 100
+    "Series1" : [ [1,10], [2,20], [3,30] ]
+```
+````
+
+**Rendered Graph:**
+```mermaid
+xychart-beta
+    title XY Chart Example
+    x-axis "X" 0 --> 10
+    y-axis "Y" 0 --> 100
+    "Series1" : [ [1,10], [2,20], [3,30] ]
+```
+
+---
+
+### Block Diagram
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+block
+    A[Block A] --> B[Block B]
+```
+````
+
+**Rendered Graph:**
+```mermaid
+block
+    A[Block A] --> B[Block B]
+```
+
+---
+
+### Packet Diagram
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+packetdiag
+    {
+      A -> B -> C;
+    }
+```
+````
+
+**Rendered Graph:**
+```mermaid
+packetdiag
+    {
+      A -> B -> C;
+    }
+```
+
+---
+
+### Kanban
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+kanban
+    title Project Board
+    section To Do
+      Task 1
+    section Doing
+      Task 2
+    section Done
+      Task 3
+```
+````
+
+**Rendered Graph:**
+```mermaid
+kanban
+    title Project Board
+    section To Do
+      Task 1
+    section Doing
+      Task 2
+    section Done
+      Task 3
+```
+
+---
+
+### Architecture Diagram
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+architecture
+    component Web
+    component API
+    component DB
+    Web --> API
+    API --> DB
+```
+````
+
+**Rendered Graph:**
+```mermaid
+architecture
+    component Web
+    component API
+    component DB
+    Web --> API
+    API --> DB
+```
+
+---
+
+### Radar Chart
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+radar
+    title Skill Comparison
+    axes
+      Communication
+      Coding
+      Testing
+    data
+      Alice : 8, 9, 7
+      Bob   : 7, 8, 8
+```
+````
+
+**Rendered Graph:**
+```mermaid
+radar
+    title Skill Comparison
+    axes
+      Communication
+      Coding
+      Testing
+    data
+      Alice : 8, 9, 7
+      Bob   : 7, 8, 8
+```
+
+---
+
+### Treemap
+
+**Mermaid Code:**
+````plaintext
+```mermaid
+treemap
+    A
+      B
+        C
+      D
+```
+````
+
+**Rendered Graph:**
+```mermaid
+treemap
+    A
+      B
+        C
+      D
+```
+
+---
 
